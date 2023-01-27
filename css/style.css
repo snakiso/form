@@ -49,20 +49,22 @@ main span {
 
 main h1 {
   font-size: 80px;
-  margin: 70px 0 35px 0;
+  margin: 115px 0 25px 65px;
   font-weight: 400;
   color: #004993;
-  margin-left: 80px;
   font-family: "Neucha", cursive;
 }
 
 main h2 {
   font-size: 30px;
-  margin: 50px 0 0 0;
+  margin: 45px 0 0 0;
   font-weight: 400;
 }
 
 main textarea {
+  padding: 10px 25px;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
   width: 100%;
   min-height: 150px;
   resize: none;
@@ -352,4 +354,79 @@ body {
 .wrapper-1300 {
   max-width: 1300px;
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  main form {
+    max-width: none;
+    margin: 0;
+  }
+
+  main h1 {
+    font-size: 50px;
+    margin: 115px 0 25px 40px;
+  }
+
+  main h2 {
+    font-size: 22px;
+  }
+
+  main span {
+    font-size: 16px;
+  }
+
+  main .parent-contacts {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  main .form-check {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main form {
+    max-width: none;
+    margin: 0;
+  }
+
+  main h1 {
+    font-size: 36px;
+    margin: 115px 0 25px 40px;
+  }
+
+  main h2 {
+    font-size: 18px;
+  }
+
+  main span {
+    font-size: 12px;
+  }
+
+  main .input {
+    font-size: 12px;
+  }
+
+  main .author-details {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  main .social-input-block .add-link {
+    transform: translateY(70%);
+    width: 60px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  main .form-check span {
+    font-size: 12px;
+  }
+
+  main input[type=submit] {
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+  }
 }

@@ -30,11 +30,10 @@ socialInputButton.addEventListener('click', () => { //Добавление и у
  socialInputButton.classList.remove('active');
  socialInputButton.disabled = true;
  let deleteLink = document.querySelectorAll('.delete-link');
-
+ let linkBox = document.querySelectorAll('.link-box')
  for (let i = 0; i < deleteLink.length; i++) {
   deleteLink[i].addEventListener('click', () => {
-
-   div.remove()
+   linkBox[i].remove()
   })
  }
 })
