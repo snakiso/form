@@ -60,7 +60,7 @@ function createImg(files) {  //функция создания изображе�
 
    let imageInfo = document.createElement('div');
    let span = document.createElement('span');
-   span.textContent = `${files[i].name}(${Math.trunc(size)}кб)`;
+   span.textContent = `${files[i].name.substr(0, 3) + "..." + files[i].name.substr(-3)}(${Math.trunc(size)}кб)`;
    imageInfo.className = 'image-info';
    imageInfo.appendChild(span);
    imageInfo.appendChild(removeBtn);
