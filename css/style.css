@@ -224,6 +224,7 @@
 }
 
 .main input[type=submit] {
+  padding: 0;
   height: 60px;
   width: 300px;
   background-color: #0F64BB;
@@ -383,16 +384,16 @@ body {
     margin: 0;
   }
 
-  .main h1 {
+  .main .form-title {
     font-size: 50px;
     margin: 115px 0 25px 40px;
   }
 
-  .main h2 {
+  .main .form-subtitle {
     font-size: 22px;
   }
 
-  .main span {
+  .main .input-title {
     font-size: 16px;
   }
 
@@ -412,16 +413,16 @@ body {
     margin: 0;
   }
 
-  .main h1 {
+  .main .form-title {
     font-size: 36px;
     margin: 115px 0 25px 40px;
   }
 
-  .main h2 {
+  .main .form-subtitle {
     font-size: 18px;
   }
 
-  .main span {
+  .main .input-title {
     font-size: 12px;
   }
 
