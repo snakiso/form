@@ -19,11 +19,11 @@ socialInputButton.addEventListener('click', () => { //Добавление и у
  let img = document.createElement('img');
  img.className = 'delete-link';
  img.src = './img/pngegg.png'
- let a = document.createElement('a');
- a.textContent = socialInput.value;
- a.href = socialInput.value;
- a.target = '_blank'
- div.appendChild(a);
+ let input = document.createElement('input');
+ input.value = socialInput.value;
+ input.disabled = true;
+ input.name = 'social'
+ div.appendChild(input);
  div.appendChild(img)
  socialLinks.appendChild(div);
  socialInput.value = ''

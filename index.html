@@ -1,122 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap&_v=20230127124759" rel="stylesheet">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap&_v=20230127124759" rel="stylesheet">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20230127124759"></script>
- <link rel="stylesheet" href="css/style.min.css?_v=20230127124759">
- <title>Главная</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap&_v=20230128090341" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap&_v=20230128090341"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230128090341">
+  <title>Главная</title>
 </head>
 
 <body>
- <main>
-  <h1>Заполните форму</h1>
-  <div class="form-box">
-  <form action="POST" class="form">
-    <div class="work-info">
-      <h2 class="form-subtitle">Информация о работе</h2>
-      <div class="underline"></div>
-      <div class="work-name df-fd">
-        <span>Название работы</span>
-        <input type="text" name="" id="" class="input" required>
-      </div>
-      <div class="work-leader df-fd">
-        <span>Руководитель проекта(не обязательно)</span>
-        <input type="text" name="" id="" class="input">
-      </div>
-      <div class="work-add df-fd">
-        <span>Прикрепите рисунок (формат jpg)</span>
-        <input type="file" name="file" id="files" class="input-file" accept=".jpg, .jpeg, .png" onChange="myFunc(this)">
-        <button class="choose-file" form=""><img src="img/Vector.png" alt=""></button>
-        <div class="images-list"></div>
-      </div>
+  <main class='main'>
+    <h1 class="form-title">Заполните форму</h1>
+    <div class="form-box">
+      <form action="POST" class="form">
+        <div class="work-info">
+          <h2 class="form-subtitle">Информация о работе</h2>
+          <div class="underline"></div>
+          <div class="work-name df-fd">
+            <span class="input-title">Название работы</span>
+            <input type="text" name="work-name" id="" required>
+          </div>
+          <div class="work-leader df-fd">
+            <span class="input-title">Руководитель проекта (не обязательно)</span>
+            <input type="text" name="work-leader" id="">
+          </div>
+          <div class="work-add df-fd">
+            <span class="input-title">Прикрепите рисунок (формат jpg)</span>
+            <input type="file" name="file" id="files" class="input-file" accept=".jpg, .jpeg, .png"
+              onChange="myFunc(this)">
+            <button class="choose-file" form=""><img src="img/Vector.png" alt=""></button>
+            <div class="images-list"></div>
+          </div>
+        </div>
+        <div class="author-info">
+          <h2 class="form-subtitle">Информация об авторе рисунка</h2>
+          <div class="underline"></div>
+          <div class="author-name ">
+            <span class="input-title">ФИО</span>
+            <input type="text" name="author-name" placeholder="Иванов Иван Иванович" required>
+          </div>
+          <div class="author-details">
+            <div class="author-age df-fd ">
+              <span class="input-title">Возраст</span>
+              <select name="" id="" class="select">
+                <option value="0"></option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+                <option value="">11</option>
+                <option value="">12</option>
+                <option value="">13</option>
+                <option value="">14</option>
+              </select>
+            </div>
+            <div class="author-city">
+              <span class="input-title">Город (Населенный пункт)</span>
+              <input type="text" name="author-city" required autocomplete="on">
+            </div>
+          </div>
+          <div class="author-education">
+            <span class="input-title">Наименование образовательного учреждения (полностью)</span>
+            <input type="text" name="author-education" required>
+          </div>
+          <div class="author-social">
+            <span class="input-title">Ссылки на соц. сети (личные или образовательных учреждений)
+              (по желанию, для добавления в группы проекта)</span>
+            <div class="social-input-block">
+              <input type="text" class="input social-input">
+              <button class="add-link" form="" disabled>Добавить</button>
+            </div>
+            <div class="social-links">
+            </div>
+          </div>
+        </div>
+        <div class="parent-info">
+          <h2 class="form-subtitle">Информация о представителе ребенка</h2>
+          <div class="underline"></div>
+          <div class="parent-name">
+            <span class="input-title">ФИО</span>
+            <input type="name" name="parent-name" placeholder="Иванов Иван Иванович" autocomplete="on" required>
+          </div>
+          <div class="parent-docs">
+            <span class="input-title">В случае опекунства / попечительства указать реквизиты документа, на основании
+              которого осуществляется
+              опека
+              или
+              попечительство</span>
+            <textarea></textarea>
+          </div>
+          <div class="parent-contacts">
+            <div class="parent-tel">
+              <span class="input-title">Контактный телефон</span>
+              <input type="tel" name="tel" id="input-phone" value="+7 " autocomplete="on" required>
+            </div>
+            <div class="parent-email">
+              <span class="input-title">Электронный адрес</span>
+              <input type="email" name="email" id="" autocomplete="on" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="" id="" class="checkbox">
+          <span class="custom-checkbox"></span>
+          <span>Отправка заявки означает, что Вы полностью ознакомились и согласны с условиями конкурса и правилами
+            обработки
+            персональных данных.</span>
+        </div>
+        <div class="form-submit">
+          <input type="submit" class="submit" value="Отправить" disabled>
+        </div>
+      </form>
     </div>
-    <div class="author-info">
-      <h2 class="form-subtitle">Информация об авторе рисунка</h2>
-      <div class="underline"></div>
-      <div class="author-name ">
-        <span>ФИО</span>
-        <input type="text" class="input " placeholder="Иванов Иван Иванович" required>
-      </div>
-      <div class="author-details">
-        <div class="author-age df-fd ">
-          <span>Возраст</span>
-          <select name="" id="" class="select">
-            <option value="0"></option>
-            <option value="">3</option>
-            <option value="">4</option>
-            <option value="">5</option>
-          </select>
-        </div>
-        <div class="author-city">
-          <span>Город(Населенный пункт)</span>
-          <input type="text" class="input" required autocomplete="on">
-        </div>
-      </div>
-      <div class="author-education">
-        <span>Наименование образовательного учреждения (полностью)</span>
-        <input type="text" class="input" required>
-      </div>
-      <div class="author-social">
-        <span>Ссылки на соц. сети (личные или образовательных учреждений)
-          (по желанию, для добавления в группы проекта)</span>
-        <div class="social-input-block">
-          <input type="text" class="input social-input">
-          <button class="add-link" form="" disabled>Добавить</button>
-        </div>
-        <div class="social-links">
-        </div>
-      </div>
-    </div>
-    <div class="parent-info">
-      <h2 class="form-subtitle">Информация о представителе ребенка</h2>
-      <div class="underline"></div>
-      <div class="parent-name ">
-        <span>ФИО</span>
-        <input type="name" class="input " placeholder="Иванов Иван Иванович" autocomplete="on" required>
-      </div>
-      <div class="parent-docs">
-        <span>В случае опекунства / попечительства указать реквизиты документа, на основании которого осуществляется
-          опека
-          или
-          попечительство</span>
-        <textarea></textarea>
-      </div>
-      <div class="parent-contacts">
-        <div class="parent-tel">
-          <span>Контактный телефон</span>
-          <input type="tel" name="" id="" class="input" autocomplete="on" required>
-        </div>
-        <div class="parent-email">
-          <span>Электронный адрес</span>
-          <input type="email" name="" id="" class="input" autocomplete="on" required>
-        </div>
-      </div>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" name="" id="" class="checkbox">
-      <span class="custom-checkbox"></span>
-      <span>Отправка заявки означает, что Вы полностью ознакомились и согласны с условиями конкурса и правилами
-        обработки
-        персональных данных.</span>
-    </div>
-    <div class="form-submit">
-      <input type="submit" class="submit" value="Отправить">
-    </div>
-  </form>
-</div>
- </main>
- <footer></footer>
- <script src="./js/photo.js?_v=20230127124759"></script>
- <script src="./js/links.js?_v=20230127124759"></script>
- <script src="./js/form.js?_v=20230127124759"></script>
+  </main>
+  <footer></footer>
+  <script src="./js/photo.js?_v=20230128090341"></script>
+  <script src="./js/links.js?_v=20230128090341"></script>
+  <script src="./js/form.js?_v=20230128090341"></script>
 </body>
 
 </html>
